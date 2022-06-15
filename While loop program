@@ -1,0 +1,22 @@
+#include<stdio.h> 
+#include <math.h>
+int main() 
+{
+	int num,digits,rem; 
+	scanf("%d",&num); 
+	digits = log10(num) + 1;
+	do
+	{
+		rem=num%10; 
+		if(rem==digits) 
+		{ 
+			printf("The given number is a good number");
+			break;
+		}
+		num/=10;
+ 	}while(digits!=0);
+	if(digits == 0)
+	 	printf("the given number is not a good number"); 
+ 	
+	return 0; 
+}
